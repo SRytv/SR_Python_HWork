@@ -1,2 +1,2 @@
 # SR_Python_HWork
-This reposotory was created to save Home works at GreekBrains Python course
+This repository was created to exchange with HomeWorks at GreekBrains Python course
