@@ -73,10 +73,10 @@ c=int(c)
 Det = b**2 - 4*a*c
 if Det >0:
 	print ("Уравнение имеет два различных вещественных корня")
-	print ((-b + math.sqrt(Det))/(2*a))
-	print ((-b - math.sqrt(Det))/(2*a))
+	print (-b + sqrt(Det))
+	print (-b - sqrt(Det))
 elif Det==0:
 	print ("Уравнение имеет равных вещественных корня")
-	print (-b/(2*a))
+	print (-b + sqrt(Det))
 else:
 	print ("Уравнение имеет два комплексных корня")
