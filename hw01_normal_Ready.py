@@ -36,9 +36,13 @@ print ("максимальная цифра в данном числе = ", _max
 
 print ("Введите число - a")
 a=input()
+a=int(a)
 print ("Введите число - b")
 b=input()
-c=a; a=b; b=c
+b=int(b)
+a=a+b
+b=a-b
+a=a-b
 print ("Поменяли числа, теперь a = ",a,",b = ",b)
 
 ИЛИ
