@@ -1,0 +1,24 @@
+#  Программа клиента, отправляющего/читающего простые текстовые сообщения на сервер
+ 
+from socket import *
+from select import select
+import sys
+
+localhost = '127.0.0.1'
+ADDRESS = (localhost, 10000)
+ 
+def echo_listen_client():
+    # Начиная с Python 3.2 сокеты имеют протокол менеджера контекста
+    # При выходе из оператора with сокет будет авторматически закрыт
+    with socket(AF_INET, SOCK_STREAM) as sock: # Создать сокет TCP
+        sock.connect(ADDRESS)   # Соединиться с сервером
+        while True:
+           data = sock.recv(1024).decode('ascii')
+           print('Ответ:', data)
+           if data == 'stop':
+               break
+
+ 
+ 
+if __name__ == '__main__':
+    echo_listen_client()
